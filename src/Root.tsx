@@ -13,6 +13,21 @@ import {
   DARUKKI_VS_TWOBUY_DURATION,
 } from './darukki-vs-twobuy/DarukkiVsTwobuy';
 import {DARUKKI_VS_TWOBUY_FPS} from './darukki-vs-twobuy/scene-spec';
+import {
+  Scene01Remotion,
+  SCENE01_REMOTION_DURATION_IN_FRAMES,
+  SCENE01_REMOTION_FPS,
+} from './darukki-vs-twobuy/Scene01Remotion';
+import {
+  Scene06VeoHold,
+  SCENE06_VEO_HOLD_DURATION_IN_FRAMES,
+  SCENE06_VEO_HOLD_FPS,
+} from './darukki-vs-twobuy/Scene06VeoHold';
+import {
+  DarukkiVsTwobuyFinal,
+  DARUKKI_FINAL_DURATION,
+  DARUKKI_FINAL_FPS,
+} from './darukki-vs-twobuy/DarukkiVsTwobuyFinal';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -26,10 +41,34 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
       />
       <Composition
+        id="Scene01RemotionPreview"
+        component={Scene01Remotion}
+        durationInFrames={SCENE01_REMOTION_DURATION_IN_FRAMES}
+        fps={SCENE01_REMOTION_FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
         id="DarukkiVsTwobuy"
         component={DarukkiVsTwobuy}
         durationInFrames={DARUKKI_VS_TWOBUY_DURATION}
         fps={DARUKKI_VS_TWOBUY_FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="Scene06VeoHold"
+        component={Scene06VeoHold}
+        durationInFrames={SCENE06_VEO_HOLD_DURATION_IN_FRAMES}
+        fps={SCENE06_VEO_HOLD_FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="DarukkiVsTwobuyFinal"
+        component={DarukkiVsTwobuyFinal}
+        durationInFrames={DARUKKI_FINAL_DURATION}
+        fps={DARUKKI_FINAL_FPS}
         width={1080}
         height={1920}
       />
